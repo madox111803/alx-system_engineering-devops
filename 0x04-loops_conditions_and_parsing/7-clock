@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#  Bash script that displays the time for 12 hours and 59 minutes
+
+c=0
+ctwo=0
+while [ $ctwo -le 59 ]; do
+        while [ $c -le 59 ]; do
+                echo "$c"
+                if [ $c -eq 0 ]; then
+                        echo "Hour: $c"
+                fi
+                ((c++))
+        done
+        echo "$ctwo"
+        if [ $ctwo -eq 0 ]; then
+                echo "Hours: 1"
+
+        fi
+        ((ctwo++))
+done
