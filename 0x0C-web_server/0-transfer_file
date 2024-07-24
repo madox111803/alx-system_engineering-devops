@@ -5,9 +5,4 @@ if [ "$#" -ne 3 ]; then
 	exit 1
 fi
 
-path=$1
-destip=$2
-user=$3
-file_to_transfer=$4
-
-scp -i "$path" "$file_to_transfer" "${user}@${destip}:"
+scp -i "$4" "$1" "${3}@${2}":~
